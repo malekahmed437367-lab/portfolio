@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030008"/>
+      <stop offset="50%" stop-color="#0e0622"/>
+      <stop offset="100%" stop-color="#03000b"/>
+    </linearGradient>
+
+    <!-- Brand Cyan-to-Purple Gradient -->
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+
+    <!-- Accent Underscore Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Radial Core Glow -->
+    <radialGradient id="radialGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.28"/>
+      <stop offset="55%" stop-color="#7c3aed" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="512" height="512" rx="120" fill="url(#bgGrad)"/>
+
+  <!-- Radial Core Glow -->
+  <circle cx="256" cy="256" r="215" fill="url(#radialGlow)"/>
+
+  <!-- Cyber Border Frame -->
+  <rect x="20" y="20" width="472" height="472" rx="104" fill="none" stroke="url(#borderGrad)" stroke-width="14"/>
+
+  <!-- Corner Tech Brackets -->
+  <path d="M 68 116 L 68 68 L 116 68" fill="none" stroke="#00e5ff" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+  <path d="M 444 396 L 444 444 L 396 444" fill="none" stroke="#7c3aed" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- Monogram Logo: MA_ -->
+  <g filter="url(#neonGlow)" fill="url(#brandGrad)">
+    <!-- Letter M -->
+    <path d="M 64 360 L 64 152 L 114 152 L 159 252 L 204 152 L 254 152 L 254 360 L 210 360 L 210 230 L 176 304 L 142 304 L 108 230 L 108 360 Z" />
+
+    <!-- Letter A with Triangle Cutout -->
+    <path fill-rule="evenodd" d="M 268 360 L 320 152 L 366 152 L 418 360 L 372 360 L 362 312 L 324 312 L 314 360 Z M 333 270 L 353 270 L 343 205 Z" />
+
+    <!-- Terminal Underscore -->
+    <rect x="428" y="342" width="34" height="18" rx="9" fill="url(#accentGrad)"/>
+  </g>
+</svg>
